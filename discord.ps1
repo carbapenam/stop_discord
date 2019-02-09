@@ -8,7 +8,7 @@ $upper_date_limit = Get-Date -Hour $upper_hour_limit -Minute 59 -Second 59
 
 $current_date = Get-Date
 
-# Set Discord path here.
+# Set Discord path and executable name here.
 
 $discord_path = ''
 $discord_exec_name = discord
@@ -21,6 +21,6 @@ if ($current_date -gt $lower_date_limit -and $current_date -lt $upper_date_limit
 while(1)
 {
    $current_date = Get-Date
-   if ($current_date -gt $upper_date_limit) {Stop-Process -name $discord_exec_name break;}
+   if ($current_date -gt $upper_date_limit) {Stop-Process -name $discord_exec_name; break;}
    start-sleep -seconds 60
 }
