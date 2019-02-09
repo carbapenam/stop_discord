@@ -16,6 +16,7 @@ $discord_exec_name = discord
 # Only turn on discord between the hours.
 
 if ($current_date -gt $lower_date_limit -and $current_date -lt $upper_date_limit) {$discord}
+else {exit}
 
 # Check every minute if the time's passed.
 while(1)
